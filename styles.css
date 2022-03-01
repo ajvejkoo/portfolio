@@ -1,0 +1,518 @@
+:root {
+    --color-main-bg: #111;
+    --color-description-bg: #252525;
+    --color-main-text: #777777;
+    --color-light-text: #AAAAAA;
+    --color-dark-text: #646464;
+    --color-hover-text: #6d83f2;
+    --font-main: 'Bebas Neue', sans-serif;
+    --font-text: 'Montseratt', sans-serif;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    line-height: 1.15;
+}
+
+body{
+    background: var(--color-main-bg);
+    font-family: var(--font-text);
+    color: var(--color-light-text);
+    
+}
+
+nav{
+    display: none;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-main-text);
+    margin: 0 auto;
+}
+
+a:hover{
+    color: var(--color-hover-text);
+}
+
+.styled {
+    font-family: var(--font-main);
+    color: var(--color-main-text);
+}
+/* ----------- Home Section ------------*/
+.div-title {
+    font-size: 27vw;
+    margin: 0.6em auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hover-title {
+    animation: animation-title 6s infinite;
+}
+
+.div-title-end {
+    animation-delay: 2s;
+}
+
+.div-title-developer {
+    animation-delay: 4s;
+}
+
+@keyframes animation-title {
+    0%{}
+    33%{color: var(--color-light-text);}
+    66%{color: var(--color-main-text);}
+}
+
+.hover-title>span:hover {
+    color: var(--color-light-text);
+}
+
+.div-about-socials {
+   
+    margin-top: 7em;
+}
+
+.div-about {
+    font-size: 1.3em;
+    padding: 0 0.6em;
+    text-align: left;
+}
+
+.span-about-small{
+    color: var(--color-dark-text);
+    font-size: 0.6em;
+}
+
+.span-about-first {
+    color: var(--color-dark-text);
+    font-size: 0.75em;
+}
+
+.span-about-name {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.div-socials{
+    font-size: 2.5em;
+    text-align: right;
+    margin: -0.25em 1em;
+}
+
+.div-socials:hover{
+    color: var(--color-hover-text);
+}
+
+.div-arrow{
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    bottom: 0.2em;
+    left: 45%;
+    right: 45%;
+    animation: arrow-animation 3s infinite;
+}
+
+@keyframes arrow-animation {
+    0% {opacity: 50%;}
+    50% {opacity: 100%; bottom: 1.2em;}
+    100% {opacity: 50%;}
+}
+
+/* ----------- Projects Section ------------*/
+
+#section-projects{
+    height: fit-content;
+}
+
+.div-project-title{
+    font-family: var(--font-main);
+    font-size: 4em;
+    text-align: center;
+    margin-top: 0.4em;
+}
+
+.div-project1-preview{
+    margin: 1.2em 1.3em;
+}
+
+.div-project1-preview iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    aspect-ratio: 16/9;
+}
+
+.div-project1-description{
+    background-color: var(--color-description-bg);
+    margin: 0 1.2em;
+    margin-bottom: 3em;
+    padding: 0.8em 1.3em;
+    border-radius: 10px;
+    font-size: 1.4em;
+}
+
+.span-project1-title{
+    font-size: 2em;
+    font-family: var(--font-main);
+}
+
+.a-project1-visit{
+    line-height: 150%;
+}
+
+.a-github-project1{
+    font-size: 1.3em;
+    line-height: 90%;
+    float: right;
+}
+/* ----------- About Section ------------*/
+
+.div-big-about-title{
+    font-size: 4em;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.div-bg-about{
+    position: absolute;
+    margin-top: 1em;
+    background: #232323;
+    min-height: 360px;
+    transform: skewY(3deg);
+    z-index: -1;
+    width: 100%;
+}
+
+.p-big-about{
+    margin: 1.8em;
+    margin-top: 2.5em;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+/* ----------- Skills Section ------------*/
+.div-skills-title {
+    font-size: 4em;
+    margin-top: 20vw;
+    text-align: center;
+    
+}
+
+.div-skills-text{
+    padding: 0 0.6em;
+    margin-top: 1em;
+    font-size: 1.28em;
+    text-align: right;
+}
+
+.span-skills-first {
+    color: var(--color-dark-text);
+    font-size: 0.75em;
+}
+
+/* ----------- Framework Section ------------*/
+.div-frameworks{
+    margin-top: 1.3em;
+    display: flex;
+    position: absolute;
+    animation: svg-animation 6s linear infinite;
+}
+
+@keyframes svg-animation {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-122%, 0, 0);
+    }
+  }
+
+.div-frameworks *{
+    margin-right: 1em; 
+}
+
+.div-skills-framework {
+    font-size: 4em;
+    margin-top: 1.3em;
+    text-align: center;
+}
+
+/* ----------- SVGs ------------*/
+
+.svg-html{
+    fill: #264DE4;
+    width: 20%; 
+    flex-shrink: 0;
+}
+
+.svg-css{
+    fill: #E54C21;
+    width: 20%;
+    flex-shrink: 0;
+}
+
+.svg-react{
+    fill: url(#react-gradient);
+    width: 20%;
+    flex-shrink: 0;
+}
+
+.svg-sass{
+    fill: url(#sass-gradient);
+    width: 20%;
+    flex-shrink: 0;
+}
+
+.svg-node{
+    fill: #8CC64D;
+    width: 20%;
+    flex-shrink: 0;
+}
+
+/* ----------- Contact Section ------------*/
+
+#contact{
+    margin-top: 1em;
+}
+
+.div-contact{
+    text-align: center;
+    font-size: 4em;
+}
+
+.div-bg-contact{
+    position: absolute;
+    margin-top: 27em;
+    background: var(--color-main-bg);
+    min-height: 360px;
+    transform: skewY(-5deg);
+    z-index: -2;
+    width: 100%;
+}
+
+.div-bg-contact2{
+    position: absolute;
+    margin-top: 1em;
+    background: #5677e2;
+    min-height: 500px;
+    border-radius: 15px;
+    z-index: -3;
+    width: 100%;
+}
+
+.div-bg-contact3{
+    position: absolute;
+    margin-top: 1em;
+    background: #232323;
+    min-height: 450px;
+    border-radius: 15px;
+    z-index: -1;
+    width: 90%;
+    left: 5%;
+    top: 12%;
+}
+.form-contact{
+    padding: 2.8em;
+    color: white;
+}
+
+.form-contact>* :not(span, label, button){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.6em 0;
+    padding: 0.8em;
+    border-radius: 8px;
+    border: none;
+    font-family: var(--font-text);
+}
+
+.form-contact>div{
+    margin: 1.4em 0;
+}
+
+.textarea-message{
+   min-height: 140px;
+}
+
+.button-submit{
+    width: 58px;
+    float: right;
+    background: var(--color-main-bg);
+    border: none;
+    border-radius: 10px;
+    margin-top: -2.5em;
+    margin-right: 1em;
+}
+
+.svg-submit{
+    fill: url(#submit-gradient);
+    flex-shrink: 0;
+}
+
+/* ----------- Media Query ------------*/
+
+@media (min-width: 400px){
+
+    .div-frameworks{
+        right: 0;
+        left: 0;
+        justify-content: center;
+    }
+
+    .svg-hide{
+        display: none;
+    }
+    .svg-html{
+        width: 90px; 
+        margin: 0 5vw;
+    }
+    
+    .svg-css{
+        width: 90px; 
+        margin: 0 5vw;
+    }
+    
+    .svg-react{
+        width: 90px; 
+        margin: 0 5vw;
+    }
+    
+    .svg-sass{
+        width: 90px; 
+        margin: 0 5vw;
+    }
+    
+    .svg-node{
+        width: 90px; 
+        margin: 0 5vw;
+    }
+
+    @keyframes svg-animation {
+        0% {
+          transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
+@media (min-width: 580px){
+.div-title {
+    margin: 0 auto;
+}
+
+
+.div-about-socials{
+margin-top: 0em;
+}
+
+.div-about{
+    text-align: center;
+}
+
+.div-socials{
+    text-align: center;
+    margin: 0.5em 1em;
+}
+}
+
+@media (min-width: 650px){
+    .div-project1{
+        display: flex;
+        justify-content: center;
+    }
+
+    .div-project1-preview{
+        margin: 2em 0;
+        margin-right: -2.5em;
+        z-index: 1;
+    }
+
+    .div-bg-contact{
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        width: 650px;
+    }
+
+    .div-bg-contact2{
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        width: 650px;
+    }
+
+    .div-bg-contact3{
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        width: 585px;
+    }
+
+    .div-form-contact{
+        display: block;
+        text-align: center;
+    }
+
+    .form-contact{
+        display: inline-block;
+        margin: inherit auto;
+        text-align: left;
+    }
+
+    .form-contact>* :not(span, label, button, svg){
+        width: 540px;
+    }
+    
+    .button-submit{
+    width: 58px;
+    }
+}
+
+@media (min-width: 1050px){
+    .div-title {
+        font-size: 283px;
+    }
+
+    .div-skills-title {
+        margin-top: 10vw;
+    }
+
+}
+
+@media (min-width: 1500px){
+    nav{
+        display: block;
+        font-family: var(--font-text);
+    }
+    
+    nav *{
+        margin: 0 2em;
+    }
+    
+    nav :first-child{
+        padding-right: 50%;
+        padding-left: 10%;
+        font-size: 1.5em;
+    }
+}
